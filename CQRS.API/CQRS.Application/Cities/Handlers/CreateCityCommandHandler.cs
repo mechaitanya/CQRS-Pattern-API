@@ -32,7 +32,7 @@ namespace CQRS.Application.Cities.Handlers
                 Name = request.Name,
                 State = request.State
             };
-            context.cities.Add(obj);
+            context.Cities.Add(obj);
             context.SaveChanges();
 
             //CityDto city = new CityDto { State = obj.State, Name = obj.Name };

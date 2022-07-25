@@ -24,7 +24,7 @@ namespace CQRS.Application.Cities.Handlers
         }
         public Task<List<CityDto>> Handle(GetCitiesQuery request, CancellationToken cancellationToken)
         {
-            List<City> city = _applicationDbContext.cities.Select(x => new City
+            List<City> city = _applicationDbContext.Cities.Select(x => new City
             {
                 ID= x.ID,
                 Name= x.Name,

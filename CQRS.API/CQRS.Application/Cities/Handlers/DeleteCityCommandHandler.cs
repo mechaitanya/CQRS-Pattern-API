@@ -25,9 +25,9 @@ namespace CQRS.Application.Cities.Handlers
 
         public async Task<bool> Handle(DeleteCityCommand request, CancellationToken cancellationToken)
         {
-            var city = context.cities.FirstOrDefault(x => x.ID == request.ID);
+            var city = context.Cities.FirstOrDefault(x => x.ID == request.ID);
             if (city != null)
-                context.cities.Remove(city);
+                context.Cities.Remove(city);
             await context.SaveChangesAsync(cancellationToken);
             return await Task.FromResult(true);
         }

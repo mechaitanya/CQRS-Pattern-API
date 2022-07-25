@@ -13,8 +13,8 @@ namespace CQRS.Application.Mapper
     {
         public void Register(TypeAdapterConfig config)
         {
-            config.NewConfig<City, CityDto>()
-             .Map(dest => dest, src => src);
+            //config.NewConfig<City, CityDto>()
+            // .Map(dest => dest, src => src);
         }
     }
 }

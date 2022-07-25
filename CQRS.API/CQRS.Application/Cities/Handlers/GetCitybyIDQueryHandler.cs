@@ -25,7 +25,7 @@ namespace CQRS.Application.Cities.Handlers
 
         public Task<CityDto> Handle(GetCitybyIDQuery request, CancellationToken cancellationToken)
         {
-            City city = context.cities.FirstOrDefault(x => x.ID == request.id);
+            City city = context.Cities.FirstOrDefault(x => x.ID == request.id);
             return Task.FromResult(mapper.Map<CityDto>(city));
         }
     }
